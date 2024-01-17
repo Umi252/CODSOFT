@@ -1,63 +1,208 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My profile</title>
-    <meta charset="utf-8">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">    <title>My Profile</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-  </head>
-  <body>
-    <div class="card">    
-      <h1>
-        Hello, I'm Umi
-      </h1>
-      <img id ="profile-pic" src="https://avatars.githubusercontent.com/u/122819248?v=4" alt="Umi Siguca" width="200">
-      <p>
-        I am passionate about coding, UX/UI Design, 
-        web-development. 
-        I am still learning i aspire to be one of the best frontend developers. 
-      </p>
-      <a href="https://github.com/Umi252" target="_blank">Discover Umi252</a>
-    </div>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Space+Mono:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    /* Add or modify your existing styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #15202B;
+      color: #D9D9D9;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .hamburger-menu {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 20px;
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 2;
+    }
+
+    .bar {
+      width: 30px;
+      height: 3px;
+      background-color: hsl(0, 0%, 20%);
+      margin: 6px 0;
+      transition: 0.5s;
+    }
+
+    .menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .menu.show {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu a {
+      display: block;
+      padding: 20px;
+      font-size: 20px;
+      text-decoration: none;
+      color: #348b39;
+      transition: 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #f0f0f0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #FFFFFF;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+      margin-right: 10px;
+    }
+
+    a {
+      text-decoration: white;
+      color: #2196F3;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    a:hover {
+      color: #22ff2d;
+    }
+
+    #profile-pic {
+      width: 200px;
+      height: 200px;
+      border-radius: 60%;
+    }
+
+    .card {
+      background-color: #192734;
+      padding: 20px;
+      width: 300px;
+      margin: 25px auto;
+      border-radius: 10px;
+      border: 1px solid #38444D;
+    }
+
+    .file-input {
+      display: flex;
+      align-items: center;
+    }
+
+    .file-input input {
+      flex-grow: 1;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: #8d8d8d;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <div class="bar" id="bar1"></div>
+    <div class="bar" id="bar2"></div>
+    <div class="bar" id="bar3"></div>
+  </div>
+
+  <div id="navigation" class="menu">
+    <!-- Your menu items go here -->
+    <a href=" ">Home</a>
+    <a href=" ">About</a>
+    <a href=" ">Services</a>
+    <a href="mailto:umisiguca25@gmail.com">Contact Information</a>
+  </div>
+
+  <div class="card">
+    <h1>Hello, I'm Umi</h1>
+    <img id="profile-pic" src="C:\Users\umisi\Downloads\B9ECED6F.ASUSPCAssistant_qmba6cd70vzyy!App\Link_to_MyASUS\6944cdcb-f680-4717-bd35-fda1ccd5ebef.jpg" alt="Umi Siguca" width="200">
+    <p>I am passionate about coding, frontend developers, web-development. I am still learning, I aspire to be one of the best frontend developers.</p>
+    <a href="https://github.com/Umi252" target="_blank" rel="noopener">Discover Umi252</a>
+  </div>
+
+  <div class="card">
+    <h2>Skills</h2>
+    <p>I am passionate about <strong>web-development frontend technologies</strong>.</p>
     
-    <div class="card">
-      <h2>
-        UX/UI Design 📐
-      </h2>
-      <p>
-        I am passionate about <strong>web-development>.
-      </p>
-    </div>
-    
-    <div class="card">
-      <h2>
-        Frontend Development 💻
-      </h2>
-      <p>
-        I am passionate about <strong>Frontend Development</strong>.
-      </p>
-    </div>
-    
-    <div class="card">
-      <h2>
-        coding 
-      </h2>
-      <p>
-        I am passionate about coding.
-      </p>
-    </div>
-    
-    <div class="card">
-      <h3>
-        Follow me
-      </h3>
-      <ul>
-        <li><a href="https://github.com/Umi252" target="_blank">Github</a></li>
-        <li><a href="https://twitter.com/umi_siguca" target="_blank">Twitter</a></li>
-        <li><a href="https://www.linkedin.com/in/umi-siguca-96a91320b" target="_blank">LinkedIn</a></li>
-        <li><a href="mailto:umisiguca25@gmail.com">umisiguca25@gmail.com</a></li>
-      </ul>
-    </div>
-    <script src="main.js"></script>
-  </body>
+
+  </div>
+
+
+  <div class="card">
+    <h2>Frontend Development 💻</h2>
+    <p>I am passionate about <strong>Frontend Development</strong>.</p>
+  </div>
+
+  <div class="card">
+    <h2>Contact Information</h2>
+    <ul>
+      <li><strong>Email:</strong> <a href="mailto:umisiguca25@gmail.com">umisiguca25@gmail.com</a></li>
+      <li><strong>Phone:</strong> +27 62 986 8891</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>Resume</h2>
+    <form id="resumeForm">
+      <label for="resumeUpload">Upload your resume (PDF only):</label>
+      <div class="file-input">
+        <input type="file" id="resumeUpload" accept=".pdf" required>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>Follow me</h2>
+    <ul>
+      <li><a href="https://github.com/Umi252" target="_blank" rel="noopener">Github</a></li>
+      <li><a href="https://twitter.com/umi_siguca" target="_blank" rel="noopener">Twitter</a></li>
+      <li><a href="https://www.linkedin.com/in/umi-siguca-96a91320b" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Umi252 All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navigation');
+      menu.classList.toggle('show');
+    }
+  </script>
+
+  <script src="scripts/resume.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+
 </html>
